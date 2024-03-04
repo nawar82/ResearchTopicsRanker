@@ -62,4 +62,4 @@ def fetch_abstracts(id_list):
     return abstracts
 
 
-print(fetch_abstracts(id_list))
+#print(fetch_abstracts(id_list))
