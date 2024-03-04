@@ -1,0 +1,10 @@
+README.md
+setup.py
+research_topics_ranker/__init__.py
+research_topics_ranker/fetch_data.py
+research_topics_ranker/params.py
+research_topics_ranker.egg-info/PKG-INFO
+research_topics_ranker.egg-info/SOURCES.txt
+research_topics_ranker.egg-info/dependency_links.txt
+research_topics_ranker.egg-info/requires.txt
+research_topics_ranker.egg-info/top_level.txt
