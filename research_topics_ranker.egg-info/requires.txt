@@ -1,3 +1,5 @@
 requests
 pandas
 lxml
+pandas
+nltk

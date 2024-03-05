@@ -1,6 +1,3 @@
 Metadata-Version: 2.1
-Name: research_topics_ranker
+Name: research-topics-ranker
 Version: 0.0.1
-Requires-Dist: requests
-Requires-Dist: pandas
-Requires-Dist: lxml
