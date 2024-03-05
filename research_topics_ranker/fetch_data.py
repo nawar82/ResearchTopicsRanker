@@ -1,3 +1,4 @@
+from numpy import save
 import requests
 import pandas as pd
 from lxml import etree
@@ -78,3 +79,12 @@ def fetch_abstracts(id_list):
 
 
 #print(fetch_abstracts(id_list))
+
+#data = pd.DataFrame(fetch_abstracts(id_list))
+#print(data)
+
+def save_search_results():
+    data = pd.DataFrame(fetch_abstracts(id_list))
+    return data.to_csv("data.csv", header=True)
+
+save_search_results()
