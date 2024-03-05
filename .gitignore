@@ -11,5 +11,7 @@ __pycache__
 *checkpoint.ipynb
 *.ipynb_checkpoints
 research_topics_ranker.egg-info
+*.vscode
+
 
 *.csv
