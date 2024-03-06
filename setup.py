@@ -6,6 +6,7 @@ requirements = [x.strip() for x in content if "git+" not in x]
 
 setup(
     name='research_topics_ranker',
-    version="0.0.1",
+    version="0.0.2",
+    license="MIT",
     install_requires=requirements,
     packages=find_packages())
