@@ -114,7 +114,7 @@ if __name__ == "__main__":
 
     # Generate a unique filename based on the current timestamp and the first three words of the query
     timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-    first_three_words = '-'.join(query.split()[:3])
+    first_three_words = '-'.join(query.split()[:3]) # type: ignore
     filename = f"raw_data/abstracts_{first_three_words}_{timestamp}.csv"
 
     # Save the DataFrame to a CSV file
