@@ -1,6 +1,6 @@
-requests
+datetime
 pandas
+requests
 lxml
 
-pandas
 nltk
