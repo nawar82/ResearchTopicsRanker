@@ -4,3 +4,7 @@ requests
 lxml
 
 nltk
+
+python-dotenv
+unidecode
+scikit-learn
