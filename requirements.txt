@@ -1,10 +1,19 @@
+# Package
 datetime
 pandas
 requests
 lxml
-
 nltk
 
+# API
+fastapi
+uvicorn
+
+# .env
 python-dotenv
+
+# frontend
+streamlit
+=======
 unidecode
 scikit-learn
