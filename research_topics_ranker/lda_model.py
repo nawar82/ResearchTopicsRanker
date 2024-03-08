@@ -42,3 +42,10 @@ def graph_topics(topics):
     plt.xlabel('Score')
     plt.tight_layout()
     plt.show()
+
+# need function that clasify every abstract in its category
+def lda_model_transform(model, vectorized_documents):
+    document_topic_mixture = model.transform(vectorized_documents)
+
+    # meed to return the max column
+    return document_topic_mixture
