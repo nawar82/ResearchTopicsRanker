@@ -81,7 +81,7 @@ def fetch_abstracts(id_list):
         articles = root.xpath('//PubmedArticle')
         for article in articles:
             pmid = article.find('.//PMID').text
-            abstract_text_element = article.find('.//Abstract/AbstractText')
+            abstract_text_element = article.find('.//Abstract')
             language = article.find('.//Language').text
             # Ensure abstract_text_element is not None before accessing its text attribute
             if abstract_text_element is not None and language == 'eng':
