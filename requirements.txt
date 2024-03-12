@@ -4,6 +4,7 @@ pandas
 requests
 lxml
 nltk
+numpy
 
 # API
 fastapi
@@ -17,6 +18,7 @@ streamlit
 
 unidecode
 
+## ML
 scikit-learn
 
 # Figures
