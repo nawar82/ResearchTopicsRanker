@@ -4,6 +4,7 @@ pandas
 requests
 lxml
 nltk
+numpy
 
 # API
 fastapi
@@ -16,4 +17,11 @@ python-dotenv
 streamlit
 
 unidecode
+
+## ML
 scikit-learn
+
+# Figures
+matplotlib
+wordcloud
+Pillow
