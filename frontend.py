@@ -1,4 +1,4 @@
-# app.py
+# frontend.py
 import streamlit as st
 
 # This could be your main page or just configurations that apply to the whole app
