@@ -9,6 +9,8 @@ COPY Makefile Makefile
 COPY .envrc .envrc
 COPY requirements.txt requirements.txt
 COPY .gitignore .gitignore
+COPY .env .env
+
 
 RUN pip install -r requirements.txt
 RUN pip install -e .
