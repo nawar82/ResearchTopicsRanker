@@ -6,6 +6,9 @@ from nltk.corpus import stopwords
 from nltk.corpus import wordnet
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('corpus')
 
 from research_topics_ranker.fetch_data import *
 from research_topics_ranker.vectorize import *
