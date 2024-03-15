@@ -9,8 +9,8 @@ from nltk.stem import WordNetLemmatizer
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 import string
-nltk.download('punkt')
-nltk.download('stopwords')
+nltk.download('punkt', download_dir="/home/appuser/nltk_data")
+nltk.download('stopwords', download_dir="/home/appuser/nltk_data")
 
 
 from wordcloud import WordCloud
