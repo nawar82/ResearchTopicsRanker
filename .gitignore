@@ -16,3 +16,4 @@ research_topics_ranker.egg-info
 .python-version
 
 *.csv
+!notebooks/stopwords.csv
