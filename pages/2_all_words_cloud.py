@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 import requests
 import nltk
 import nltk.data
+nltk.download('punkt', download_dir="/home/appuser/nltk_data")
+nltk.download('stopwords', download_dir="/home/appuser/nltk_data")
 
 from research_topics_ranker.fetch_data import *
 from research_topics_ranker.vectorize import *
