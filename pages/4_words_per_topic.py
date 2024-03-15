@@ -29,7 +29,8 @@ with st.form(key='params_for_api'):
 
 
 
-url = "http://127.0.0.1:8000/plot_words_per_topics"
+url = "https://research-topics-ranker-gs34zyaenq-ew.a.run.app/plot_words_per_topics"
+#url = "http://127.0.0.1:8000/plot_words_per_topics"
 params = {
     "query" : ""
 }

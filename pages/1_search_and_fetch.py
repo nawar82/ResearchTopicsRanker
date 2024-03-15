@@ -46,8 +46,8 @@ else:
 
 
 
-
-url = "http://127.0.0.1:8000/search_pubmed"
+url = "https://research-topics-ranker-gs34zyaenq-ew.a.run.app/search_pubmed"
+#url = "http://127.0.0.1:8000/search_pubmed"
 params = {
     "query" : ""
 }
