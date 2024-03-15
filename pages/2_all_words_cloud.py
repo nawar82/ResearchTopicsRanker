@@ -1,11 +1,15 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import requests
+import nltk
+from nltk.corpus import stopwords, wordnet, punkt
+from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer
 
 from research_topics_ranker.fetch_data import *
 from research_topics_ranker.vectorize import *
 from research_topics_ranker.main import *
-from api.fast import plot_words_per_topics
+from api.fast import AllWordsCloud
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
@@ -18,13 +22,13 @@ with st.form(key='params_for_api'):
 
     query = st.text_input('searched terms in pubmed', value="")
 
-    submitted = st.form_submit_button('Top words per topics')
+    submitted = st.form_submit_button('Word cloud for top words over all topics')
     if submitted:
-        st.pyplot(plot_words_per_topics(query))
+        st.pyplot(AllWordsCloud(query))
 
 
 
-url = "http://127.0.0.1:8000/plot_words_per_topics"
+url = "http://127.0.0.1:8000/AllWordsCloud"
 params = {
     "query" : ""
 }
