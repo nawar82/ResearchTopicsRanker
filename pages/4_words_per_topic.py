@@ -2,10 +2,10 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import requests
 import nltk
-from nltk.corpus import stopwords
-from nltk.corpus import wordnet
-from nltk.tokenize import word_tokenize
-from nltk.stem import WordNetLemmatizer
+import nltk.data
+nltk.download('punkt', download_dir="/home/appuser/nltk_data")
+nltk.download('stopwords', download_dir="/home/appuser/nltk_data")
+nltk.download('wordnet', download_dir="/home/appuser/nltk_data")
 
 from research_topics_ranker.fetch_data import *
 from research_topics_ranker.vectorize import *
