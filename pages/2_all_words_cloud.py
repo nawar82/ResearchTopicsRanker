@@ -9,6 +9,7 @@ from research_topics_ranker.vectorize import *
 from research_topics_ranker.main import *
 from api.fast import AllWordsCloud
 
+nltk.data.path = ['nltk/corpora/']
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # Title for your app
