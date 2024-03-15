@@ -4,6 +4,7 @@ pandas
 requests
 lxml
 nltk
+nltk.download('wordnet')
 numpy
 
 # API
