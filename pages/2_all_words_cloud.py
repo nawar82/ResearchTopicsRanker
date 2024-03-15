@@ -26,8 +26,8 @@ with st.form(key='params_for_api'):
         st.pyplot(AllWordsCloud(query))
 
 
-
-url = "http://127.0.0.1:8000/AllWordsCloud"
+url = "https://research-topics-ranker-gs34zyaenq-ew.a.run.app/AllWordsCloud"
+#url = "http://127.0.0.1:8000/AllWordsCloud"
 params = {
     "query" : ""
 }

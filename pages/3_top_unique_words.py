@@ -29,7 +29,8 @@ with st.form(key='params_for_api'):
 
 
 
-url = "http://127.0.0.1:8000/top_unique_words"
+url = "https://research-topics-ranker-gs34zyaenq-ew.a.run.app/top_unique_words"
+#url = "http://127.0.0.1:8000/top_unique_words"
 params = {
     "query" : ""
 }
