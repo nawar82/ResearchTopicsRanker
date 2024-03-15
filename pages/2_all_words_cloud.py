@@ -2,10 +2,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import requests
 import nltk
-from nltk.corpus import stopwords, wordnet
 import nltk.data
-from nltk.tokenize import word_tokenize
-from nltk.stem import WordNetLemmatizer
 
 from research_topics_ranker.fetch_data import *
 from research_topics_ranker.vectorize import *
