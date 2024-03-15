@@ -5,7 +5,6 @@ requests
 lxml
 nltk
 numpy
-from nltk.corpus import stopwords, wordnet, punkt
 
 # API
 fastapi
