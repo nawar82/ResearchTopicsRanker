@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-from research_topics_ranker.fetch_data import *
+from ReseachTopicsRanker.research_topics_ranker.fetch_data import *
 from research_topics_ranker.vectorize import *
 
 
