@@ -1,3 +1,5 @@
+import pandas as pd
+import numpy as np
 from sklearn.decomposition import LatentDirichletAllocation
 
 import matplotlib.pyplot as plt
@@ -43,9 +45,25 @@ def graph_topics(topics):
     plt.tight_layout()
     plt.show()
 
-# need function that clasify every abstract in its category
-def lda_model_transform(model, vectorized_documents):
+
+def lda_model_transform(model, vectorized_documents, original_DF):
+    # Return a DF that merges the original DF with the array that classify the topics
     document_topic_mixture = model.transform(vectorized_documents)
+    R, T = document_topic_mixture.shape
+
+    #create new column with the topic number
+    max_indices = np.argmax(document_topic_mixture, axis=1)
+    new_column = max_indices[:, np.newaxis]
+    document_topic_mixture_cluster_n = np.concatenate((document_topic_mixture, new_column), axis=1)
+
+    #transform the array to DF
+    columns = ['topic_{}'.format(i) for i in range(3)] + ['Main_Topic']
+    df_array = pd.DataFrame(document_topic_mixture_cluster_n, columns=columns)
+
+    #merge original DataFrame with this
+    merged_df = pd.concat([original_DF, df_array], axis=1)
 
     # meed to return the max column
-    return document_topic_mixture
+    # return document_topic_mixture
+    # return document_topic_mixture_cluster_n
+    return merged_df
