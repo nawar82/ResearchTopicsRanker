@@ -7,6 +7,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 
+import csv
 import unidecode
 from sklearn.feature_extraction.text import TfidfVectorizer
 import string
@@ -22,6 +23,12 @@ api_key = EUTILS_API_KEY        # It's recommended to include your NCBI API key
 email = EMAIL
 query = QUERY
 nr_of_requests = NR_OF_REQUESTS
+
+with open ('notebooks/stopwords.csv') as csvfile:
+    reader = csv.reader(csvfile)
+    academic_terms_proper_case = [word.strip('\ufeff') for row in reader for word in row]
+
+academic_terms = [word.lower() for word in academic_terms_proper_case]
 
 def preprocessing(sentence):
     if sentence is None:
@@ -53,7 +60,14 @@ def preprocessing(sentence):
     lemmatized_words = [lemmatizer.lemmatize(word, pos='v') for word in words]  # Lemmatize verbs
     lemmatized_words = [lemmatizer.lemmatize(word, pos='n') for word in lemmatized_words]  # Lemmatize nouns
 
-    return ' '.join(lemmatized_words)
+    # Remove Stopwords
+    stop_words = set(stopwords.words('english'))
+    tokenized_no_stopwords = [word for word in lemmatized_words if word not in stop_words]
+
+    # Remove specialised stopwords
+    no_specialised_stopwords = [word for word in tokenized_no_stopwords if word.lower() not in academic_terms]
+    cleaned_sentence = " ".join(no_specialised_stopwords)
+    return cleaned_sentence
 
 
 if __name__ == "__main__":
