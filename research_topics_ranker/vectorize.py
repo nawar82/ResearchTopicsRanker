@@ -23,6 +23,8 @@ query = QUERY
 nr_of_requests = NR_OF_REQUESTS
 
 def preprocessing(sentence):
+    if sentence is None:
+        return ""
 
     # remove whitespace
     sentence = sentence.strip()
