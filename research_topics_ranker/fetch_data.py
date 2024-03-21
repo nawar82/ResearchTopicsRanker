@@ -83,12 +83,14 @@ def fetch_abstracts(id_list):
             pmid = article.find('.//PMID').text
             abstract_text_element = article.find('.//Abstract')
             language = article.find('.//Language').text
+            journal = article.find('.//Journal/Title').text
+
             # Ensure abstract_text_element is not None before accessing its text attribute
             if abstract_text_element is not None and language == 'eng':
                 abstract_text = get_all_text(abstract_text_element)
                 # Further ensure the text is not None and not just whitespace
                 if abstract_text and abstract_text.strip():
-                    abstracts.append({"PMID": pmid, "Abstract": abstract_text})
+                    abstracts.append({"PMID": pmid, "Abstract": abstract_text, "Journal":journal})
     else:
         print("Error occurred while fetching details")
     return abstracts
