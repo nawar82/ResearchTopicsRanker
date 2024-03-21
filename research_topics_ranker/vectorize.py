@@ -7,6 +7,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 
+import unidecode
 from sklearn.feature_extraction.text import TfidfVectorizer
 import string
 nltk.download('punkt', download_dir="/home/appuser/nltk_data")
@@ -39,6 +40,7 @@ def preprocessing(sentence):
     for punctuation in string.punctuation:
         sentence = sentence.replace(punctuation, '')
 
+    sentence = unidecode.unidecode(sentence)
     # remove stop_words
     stop_words = set(stopwords.words('english'))
     words = word_tokenize(sentence)
